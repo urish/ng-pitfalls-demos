@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>ng-conf demo - prototype-trap</title>
+</head>
+<body>
+<div ng-app>
+	<h2>
+		This works:
+	</h2>
+
+	<div>Your name: {{userName}}</div>
+	<div><input ng-model="userName"/></div>
+
+	<h2>
+		This doesn't:
+	</h2>
+
+	<div>
+		Your name: {{userName}}
+		<input ng-model="edit" type="checkbox" />Edit
+	</div>
+	<div ng-if="edit"><input ng-model="userName" /></div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>ng-conf demo - slow-watches</title>
+</head>
+<body>
+<div ng-app="urish.demo" ng-controller="ScopeApplyCtrl">
+	<p>
+		Timer: {{value}}
+	</p>
+
+	<p>
+		Your name: {{user.name}}<br/>
+		<input ng-model="user.name">
+	</p>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script type="text/javascript">
+	angular
+		.module('urish.demo', [])
+		.controller('ScopeApplyCtrl', function ($scope) {
+			$scope.value = 0;
+			$scope.user = {
+				name: 'Misko'
+			};
+			setInterval(function () {
+				$scope.$apply(function() {
+					$scope.value++;
+				});
+			}, 100);
+		});
+</script>
+</body>
+</html>

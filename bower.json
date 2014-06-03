@@ -1,0 +1,12 @@
+{
+  "name": "ng-conf-demo",
+  "version": "1.0.0",
+  "authors": [
+    "Uri Shaked"
+  ],
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.2.16"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ng-conf demo - slow-watches</title>
+</head>
+<body>
+	<div ng-app="urish.demo" ng-controller="SlowWatchCtrl">
+		<div>
+			fibonacci: {{fibonacci(5)}}
+		</div>
+		{{i}}
+		<div ng-mousemove="i = i + 1">
+			fibonacci big: {{fibonacci(25)}}
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript">
+		angular
+			.module('urish.demo', [])
+			.controller('SlowWatchCtrl', function($scope) {
+				function fibonacci(n) {
+					if (n < 2) {
+						return 1;
+					}
+					return fibonacci(n-1) + fibonacci(n-2);
+				};
+				$scope.fibonacci = fibonacci;
+			});
+	</script>
+</body>
+</html>

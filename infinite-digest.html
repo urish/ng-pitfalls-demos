@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ng-conf demo - infinite-digest</title>
+</head>
+<body>
+	<div ng-app>
+		<div ng-repeat="item in [[1,2,3],[5,6]]">
+			{{item}} - {{item.length}}
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.js"></script>
+</body>
+</html>
