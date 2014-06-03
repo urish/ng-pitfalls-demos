@@ -15,6 +15,6 @@ The slides are [here](https://docs.google.com/presentation/d/1yOtd13p3q3wzaaPM3z
 
 ## How to run the demos?
 
-Run `gulp` and then open http://localhost:7200/ in your web-browser.
+Run `gulp` and then open [http://localhost:7200/](http://localhost:7200/) in your web-browser.
 
 We have set up a livereload gulp configuration, so you can make changes in the demos, and see them go live immediately.
